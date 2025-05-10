@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tourisme en Tunisie</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="inscription.html">Inscription</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hôtels -->
+    <section class="destination">
+        <div class="text">
+            <h2>Hôtel Gammarth</h2>
+            <p>Situé à Gammarth et surplombant le golfe de Tunis, l’hôtel 5 étoiles The Residence Tunis dispose d'un parcours de golf et de 2 piscines.</p>
+        </div>
+        <div class="image">
+            <img src="images/gammart.avif" onclick="scrollToBottom()" alt="Scroll Down" >
+        </div>
+    </section>
+
+    <section class="destination reverse">
+        <div class="text">
+            <h2>Hôtel Hammamet</h2>
+            <p>Situé à Hammamet, l'Hotel Khella propose un hébergement 3 étoiles avec un jardin. Construit en 2000, il se trouve à 500 mètres de la Kasbah et à 10 km de Carthageland.</p>
+        </div>
+        <div class="image">
+         <img src="images/hammamet.jpg"  onclick="scrollToBottom()" alt="Scroll Down">
+        </div>
+    </section>
+
+    <section class="destination">
+        <div class="text">
+            <h2>Hôtel Sousse</h2>
+            <p>Situé dans le centre de Sousse, à proximité de la médina, le Sousse Palace Hotel & Spa bénéficie d'un accès direct à une plage privée.</p>
+        </div>
+        <div class="image">
+            <img src="images/sousse" alt="Hôtel Sousse"  onclick="scrollToBottom()" alt="Scroll Down">
+        </div>
+    </section>
+
+    <!-- Formulaire -->
+    <h1>Inscrivez-vous</h1>
+
+    <form id="inscription" class="formulaire" action="" method="POST" novalidate>
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom">
+
+        <label for="nom">Selectionnez-vous Hotel :</label>
+        <select name="" id="">
+            <option value="">Gammarth</option>
+            <option value="">Hammamet</option>
+            <option value="">Sousse</option>
+
+        </select>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email">
+
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" name="password">
+
+        <label for="tel">Téléphone :</label>
+        <input type="text" id="tel" name="tel">
+
+
+        <div id="erreurs" style="color: red; margin-top: 10px;"></div>
+
+        <button type="submit">S'inscrire</button>
+    </form>
+
+    <!-- Footer -->
+    <footer>
+        <p>© Nous sommes la meilleure agence</p>
+    </footer>
+
+    <script>
+    function scrollToBottom() {
+      document.getElementById("inscription").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>

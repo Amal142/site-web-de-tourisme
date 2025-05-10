@@ -1,0 +1,214 @@
+/* ====== RESET & BASE ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-image: linear-gradient(to right, #c9d6ff, #e2e2e2);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ====== HEADER & NAV ====== */
+header {
+  background-color: rgba(70, 130, 180, 0.9); /* steelblue semi-transparent */
+  padding: 10px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: white;
+  color: steelblue;
+  transform: scale(1.05);
+}
+
+/* ====== TITRE ====== */
+h1 {
+  text-align: center;
+  font-size: 50px;
+  margin: 50px 0;
+  animation: fadeIn 2s ease-in-out;
+  color: #333;
+}
+.hero {
+  background-image: linear-gradient(to right, #00b4db, #0083b0);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 20px;
+}
+
+/* ===== DESTINATIONS ===== */
+.destination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 50px 10%;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.destination.reverse {
+  flex-direction: row-reverse;
+}
+
+.destination .text {
+  flex: 1;
+}
+
+.destination .text h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #1e90ff;
+}
+
+.destination .text p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.destination .image {
+  flex: 1;
+}
+
+.destination .image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.destination .image img:hover {
+  transform: scale(1.03);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+/* ====== IMAGES ====== */
+.image {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.image img {
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* ====== FORMULAIRES ====== */
+.formulaire {
+  width: 50%;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  animation: slideIn 1.2s ease;
+}
+
+.formulaire label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: bold;
+  color: #444;
+}
+
+.formulaire input,
+.formulaire textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+}
+
+.formulaire input:focus,
+.formulaire textarea:focus {
+  border-color: steelblue;
+  outline: none;
+}
+
+.formulaire button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: steelblue;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulaire button:hover {
+  background-color: #4682B4;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  background-color: #2f4f4f;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+  box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+}
+
+/* ====== ANIMATIONS ====== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-50px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+    img {
+      cursor: pointer;
+      width: 200px;
+    }
