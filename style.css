@@ -212,3 +212,21 @@ footer {
       cursor: pointer;
       width: 200px;
     }
+ #chatbot-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    font-size: 28px;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 999;
+    transition: background-color 0.3s ease;
+}
+
+#chatbot-icon:hover {
+    background-color: #0056b3;
+}
