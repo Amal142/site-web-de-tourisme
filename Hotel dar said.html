@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Dar Said - Sidi Bou Saïd</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="inscription.html">Inscription</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="destination">
+  <div class="text">
+    <h2>Hotel Dar Said</h2>
+    <p>
+      Situé à Sidi Bou Saïd, l’Hotel Dar Said allie charme traditionnel tunisien et confort moderne.
+      Profitez d’une vue magnifique, d’un patio paisible et de chambres élégantes pour un séjour inoubliable
+      à quelques pas de la mer Méditerranée.
+    </p>
+  </div>
+
+  <div class="image">
+    <img src="images/hotel dar said/dar said.jpeg" alt="Vue 4">
+
+    <!-- 🔽 Le bouton est ici, juste sous l'image -->
+    <div class="reservation-btn">
+      <a href="reservation.html">Réserver maintenant</a>
+    </div>
+  </div>
+</section>
+
+    <h1>Inscrivez-vous</h1>
+<form  id="inscription" class="formulaire" action="client.php" method="POST">
+    <label>Nom :</label>
+    <input type="text" name="nom" required><br>
+
+    <label>Prénom :</label>
+    <input type="text" name="prenom" required><br>
+
+    <label>Email :</label>
+    <input type="email" name="email" required><br>
+
+    <label>Téléphone :</label>
+    <input type="tel" name="telephone" required><br>
+
+    <label>Adresse :</label>
+    <input type="text" name="adresse" required><br>
+
+    <label>Date de naissance :</label>
+    <input type="date" name="date_naissance" required><br>
+
+    <label>Nom de l'hôtel :</label>
+    <input type="text" name="hotel" required><br>
+
+    <label>Type de chambre :</label>
+    <select name="typechambre" required>
+        <option value="">--Sélectionnez--</option>
+        <option value="single">Single</option>
+        <option value="double">Double</option>
+        <option value="suite">Suite</option>
+    </select><br>
+
+    <input type="submit" value="Enregistrer">
+</form>
+
+
+</body>
+</html>
