@@ -244,3 +244,31 @@ footer {
   border-radius: 8px;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  padding: 20px;
+}
+.container {
+  background: white;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+label, select, input {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+}
+button {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+#resultat {
+  margin-top: 20px;
+  font-weight: bold;
+}
