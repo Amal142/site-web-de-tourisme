@@ -4,17 +4,17 @@ class inscription{
     private $nom;    
     private $prenom;    
     private $email;
-    private $passwords;    
-    private $tel;    
+    private $mot_de_passe;    
+    private $message;    
     
 
-    function __constructeur($id,$nom,$prenom,$email,$mot_de_passe,$tel){
+    function __constructeur($id,$nom,$prenom,$email,$mot_de_passe,$message){
         $this->id=$id;
         $this->nom=$nom;
         $this->prenom=$prenom;
         $this->email=$email;
-        $this->passwords=$passwords;
-        $this->tel=$tel;
+        $this->mot_de_passe=$mot_de_passe;
+        $this->message=$message;
     }
     
     function getId(){
@@ -48,20 +48,20 @@ class inscription{
         $this->email=$email;
     }
     function getpassword(){
-        return $this->passwords;
+        return $this->mot_de_passe;
     }
 
-      function setpassword($passwords){
-        $this->passwords=$passwords;
+      function setpassword($mot_de_passe){
+        $this->mot_de_passe=$mot_de_passe;
     }
 
        
     function getTel(){
-        return $this->tel;
+        return $this->message;
     }
 
-      function setTel($tel){
-        $this->tel=$tel;
+      function setTel($message){
+        $this->message=$message;
     }
 }
 ?>

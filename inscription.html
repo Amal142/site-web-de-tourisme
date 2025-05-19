@@ -18,56 +18,20 @@
         </nav>
     </header>
 
-    <!-- Hôtels -->
-    <section class="destination">
-        <div class="text">
-            <h2>Hôtel Gammarth</h2>
-            <p>Situé à Gammarth et surplombant le golfe de Tunis, l’hôtel 5 étoiles The Residence Tunis dispose d'un parcours de golf et de 2 piscines.</p>
-        </div>
-        <div class="image">
-            <img src="images/gammart.avif" onclick="scrollToBottom()" alt="Scroll Down" >
-        </div>
-    </section>
-
-    <section class="destination reverse">
-        <div class="text">
-            <h2>Hôtel Hammamet</h2>
-            <p>Situé à Hammamet, l'Hotel Khella propose un hébergement 3 étoiles avec un jardin. Construit en 2000, il se trouve à 500 mètres de la Kasbah et à 10 km de Carthageland.</p>
-        </div>
-        <div class="image">
-         <img src="images/hammamet.jpg"  onclick="scrollToBottom()" alt="Scroll Down">
-        </div>
-    </section>
-
-    <section class="destination">
-        <div class="text">
-            <h2>Hôtel Sousse</h2>
-            <p>Situé dans le centre de Sousse, à proximité de la médina, le Sousse Palace Hotel & Spa bénéficie d'un accès direct à une plage privée.</p>
-        </div>
-        <div class="image">
-            <img src="images/sousse" alt="Hôtel Sousse"  onclick="scrollToBottom()" alt="Scroll Down">
-        </div>
-    </section>
-
     <!-- Formulaire -->
     <h1>Inscrivez-vous</h1>
 
-    <form id="inscription" class="formulaire" action="" method="POST" novalidate>
+    <form id="inscription" class="formulaire" action="ajouter inscrit.php" method="POST" novalidate>
         <label for="nom">Nom :</label>
         <input type="text" id="nom" name="nom">
 
-        <label for="nom">Selectionnez-vous Hotel :</label>
-        <select name="" id="">
-            <option value="">Gammarth</option>
-            <option value="">Hammamet</option>
-            <option value="">Sousse</option>
-
-        </select>
+        <label for="nom">prenom :</label>
+        <input type="text" id="prenom" name="prenom">
 
         <label for="email">Email :</label>
         <input type="email" id="email" name="email">
 
-        <label for="password">Mot de passe :</label>
+        <label for="password">passwords :</label>
         <input type="password" id="password" name="password">
 
         <label for="tel">Téléphone :</label>

@@ -42,11 +42,11 @@ class Client{
     }
 
        
-    function getLocalisation(){
+    function getPrenom(){
         return $this->prenom;
     }
 
-    function setLocalisation($prenom){
+    function setPrenom($prenom){
         $this->prenom=$prenom;
     }
 
@@ -59,27 +59,27 @@ class Client{
         $this->typechambre=$typechambre;
     }
        
-    function getNbrchambre(){
+    function getEmail(){
         return $this->email;
     }
 
-      function setnbrchambre($email){
+      function setEmail($email){
         $this->email=$email;
     }
 
        
-    function getStatus(){
+    function getTel(){
         return $this->tel;
     }
 
-      function setstatus($tel){
+      function setTel($tel){
         $this->tel=$tel;
     }
-       function getNbretoiles(){
+       function getAdresse(){
         return $this->adresse;
     }
 
-    function setNbretoiles($adresse){
+    function setAdresse($adresse){
         $this->adresse=$adresse;
     }
            function getDateNaissance(){
