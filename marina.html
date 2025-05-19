@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Marina Palace - Hammamet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="inscription.html">Inscription</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="calculator.html">Calculez votre budget</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="destination">
+    <div class="text">
+      <h2>Hotel Marina Palace</h2>
+      <p>
+        Situé à Hammamet Sud, l’Hôtel Marina Palace vous propose un séjour détente à proximité des plages dorées.
+        Il offre des chambres spacieuses, une piscine, un spa et des restaurants sur place.
+        Idéal pour des vacances en couple, en famille ou entre amis.
+      </p>
+    </div>
+
+    <div class="image">
+      <img src="images/marina/marina-palace.jpeg" alt="Marina Palace Hammamet">
+      <div class="reservation-btn">
+        <a href="reservation.html">Réserver maintenant</a>
+      </div>
+    </div>
+  </section>
+
+  <h1>Inscrivez-vous</h1>
+  <form id="inscription" class="formulaire" action="client.php" method="POST">
+      <label>Nom :</label>
+      <input type="text" name="nom" required><br>
+
+      <label>Prénom :</label>
+      <input type="text" name="prenom" required><br>
+
+      <label>Email :</label>
+      <input type="email" name="email" required><br>
+
+      <label>Téléphone :</label>
+      <input type="tel" name="telephone" required><br>
+
+      <label>Adresse :</label>
+      <input type="text" name="adresse" required><br>
+
+      <label>Date de naissance :</label>
+      <input type="date" name="date_naissance" required><br>
+
+      <label>Nom de l'hôtel :</label>
+      <input type="text" name="hotel" value="Hotel Marina Palace - Hammamet" readonly><br>
+
+      <label>Type de chambre :</label>
+      <select name="typechambre" required>
+          <option value="">--Sélectionnez--</option>
+          <option value="single">Single</option>
+          <option value="double">Double</option>
+          <option value="suite">Suite</option>
+      </select><br>
+
+      <input type="submit" value="Enregistrer">
+  </form>
+
+</body>
+</html>
