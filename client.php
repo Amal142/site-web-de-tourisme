@@ -1,48 +1,101 @@
 <?php
-require("./config.php");
+class Client{
+    private $id;
+    private $nom;    
+    private $prenom;    
+    private $email;    
+    private $tel;    
+    private $adresse;
+    private $nomhotel;
+    private $typechambre;
+    private $dateNaissance;
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Validation des données
-    $nom = filter_input(INPUT_POST, 'nom', FILTER_SANITIZE_STRING);
-    $prenom = filter_input(INPUT_POST, 'prenom', FILTER_SANITIZE_STRING);
-    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
-    $telephone = filter_input(INPUT_POST, 'telephone', FILTER_SANITIZE_STRING);
-    $adresse = filter_input(INPUT_POST, 'adresse', FILTER_SANITIZE_STRING);
-    $date_naissance = $_POST['date_naissance'];
-    $hotel = filter_input(INPUT_POST, 'hotel', FILTER_SANITIZE_STRING);
-    $typechambre = $_POST['typechambre'];
 
-    if (!$email) {
-        die("❌ Email invalide.");
+    function __constructeur($id,$nom,$prenom,$email,$tel,$adresse,$nomhotel,$typechambre,$dateNaissance){
+        $this->id=$id;
+        $this->nom=$nom;
+        $this->prenom=$prenom;
+        $this->typechambre=$typechambre;
+        $this->tel=$tel;
+        $this->adresse=$adresse;
+        $this->nomhotel=$nomhotel;
+        $this->email=$email;
+        $this->dateNaissance=$dateNaissance;
+
+
+    }
+    
+    function getId(){
+        return $this->id;
     }
 
-    try {
-        $sql = "INSERT INTO clients (nom, prenom, email, telephone, adresse, date_naissance, hotel, typechambre)
-                VALUES (:nom, :prenom, :email, :telephone, :adresse, :date_naissance, :hotel, :typechambre)";
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute([
-            ':nom' => $nom,
-            ':prenom' => $prenom,
-            ':email' => $email,
-            ':telephone' => $telephone,
-            ':adresse' => $adresse,
-            ':date_naissance' => $date_naissance,
-            ':hotel' => $hotel,
-            ':typechambre' => $typechambre
-        ]);
-        
-        // Vérifier si l'insertion a réussi
-        if ($stmt->rowCount() > 0) {
-            echo "✅ Client enregistré avec succès. ID: " . $pdo->lastInsertId();
-        } else {
-            echo "❌ Aucun client n'a été enregistré.";
-        }
-    } catch (PDOException $e) {
-        echo "❌ Erreur lors de l'enregistrement : " . $e->getMessage();
-        // Pour débogage, vous pouvez aussi logger l'erreur
-        error_log("Erreur PDO: " . $e->getMessage());
+    function setId($id){
+        $this->id=$id;
     }
-} else {
-    echo "❌ Requête invalide.";
+    
+    function getNom(){
+        return $this->nom;
+    }
+
+    function setNom($nom){
+        $this->nom=$nom;
+    }
+
+       
+    function getLocalisation(){
+        return $this->prenom;
+    }
+
+    function setLocalisation($prenom){
+        $this->prenom=$prenom;
+    }
+
+       
+    function getTypechambre(){
+        return $this->typechambre;
+    }
+
+      function setTypechambre($typechambre){
+        $this->typechambre=$typechambre;
+    }
+       
+    function getNbrchambre(){
+        return $this->email;
+    }
+
+      function setnbrchambre($email){
+        $this->email=$email;
+    }
+
+       
+    function getStatus(){
+        return $this->tel;
+    }
+
+      function setstatus($tel){
+        $this->tel=$tel;
+    }
+       function getNbretoiles(){
+        return $this->adresse;
+    }
+
+    function setNbretoiles($adresse){
+        $this->adresse=$adresse;
+    }
+           function getDateNaissance(){
+        return $this->dateNaissance;
+    }
+
+    function setDateNaissance($dateNaissance){
+        $this->dateNaissance=$dateNaissance;
+    }
+           function getNomHotel(){
+        return $this->nomhotel;
+    }
+
+    function setNomHotel($nomhotel){
+        $this->nomhotel=$nomhotel;
+    }
 }
+
 ?>
