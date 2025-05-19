@@ -272,3 +272,44 @@ button {
   margin-top: 20px;
   font-weight: bold;
 }
+#chatbot-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+#chatbot-window {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+#chatbot-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#chatbot-messages {
+    height: 200px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+    padding: 5px;
+}
+
+#chatbot-input {
+    width: 70%;
+}
+
+button {
+    width: 25%;
+}
