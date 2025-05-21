@@ -4,7 +4,7 @@ class inscription{
     private $nom;    
     private $prenom;    
     private $email;
-    private $mot_de_passe;    
+    private $password;    
     private $message;    
     
 
@@ -13,7 +13,7 @@ class inscription{
         $this->nom=$nom;
         $this->prenom=$prenom;
         $this->email=$email;
-        $this->mot_de_passe=$mot_de_passe;
+        $this->password=$password;
         $this->message=$message;
     }
     
@@ -48,11 +48,11 @@ class inscription{
         $this->email=$email;
     }
     function getpassword(){
-        return $this->mot_de_passe;
+        return $this->password;
     }
 
-      function setpassword($mot_de_passe){
-        $this->mot_de_passe=$mot_de_passe;
+      function setpassword($password){
+        $this->password=$password;
     }
 
        

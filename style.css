@@ -313,3 +313,61 @@ button {
 button {
     width: 25%;
 }
+.categories {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.categories h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #333;
+  text-align: center;
+}
+
+.grid-categories {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.categorie {
+  width: 250px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.categorie img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.categorie p {
+  margin-top: 15px;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.categorie:hover {
+  transform: translateY(-8px);
+}
+.voir-plus {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.95em;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.voir-plus:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
