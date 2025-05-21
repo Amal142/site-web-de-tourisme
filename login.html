@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Authentification</title>
+  <style>
+   
+
+
+    .auth-form {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .auth-form h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .auth-form label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .auth-form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .auth-form button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .auth-form button:hover {
+      background-color: #0056b3;
+    }
+
+    
+  </style>
+</head>
+<body>
+
+  <header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="inscription.html">Inscription</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Se connecter</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="auth-form">
+    <h1>Connexion</h1>
+    <form action="traitement_auth.php" method="post">
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Mot de passe :</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="submit">Se connecter</button>
+    </form>
+    <a href="inscription.html">Signin</a>
+  </section>
+
+  <footer>
+    <p>© 2025 – Agence de tourisme</p>
+  </footer>
+
+</body>
+</html>
+
