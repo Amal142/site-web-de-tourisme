@@ -70,30 +70,61 @@
     </div>
   </section>
  
-<div id="chatbot-icon" onclick="toggleChatbot()">
-    <img src="images/chatbot.png" alt="Chatbot" style="width: 60px; cursor: pointer;">
-</div>
-
-<div id="chatbot-frame" style="display: none; position: fixed; bottom: 80px; right: 20px; width: 400px; height: 600px; border: 2px solid #ccc; border-radius: 10px; overflow: hidden; z-index: 1000;">
-    <iframe src="http://127.0.0.1:7860" width="100%" height="100%" style="border: none;"></iframe>
+<div id="chatbot-container" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+    <!-- Chatbot toggle button -->
+    <button id="chatbot-toggle" onclick="toggleChatbot()" 
+            style="background-color: #4CAF50; color: white; border: none; 
+                   border-radius: 50%; width: 60px; height: 60px; font-size: 24px;
+                   cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+                   transition: all 0.3s ease;">
+        🤖
+    </button>
+    
+    <!-- Chatbot frame -->
+    <div id="chatbot-frame" 
+         style="display: none; position: absolute; bottom: 70px; right: 0;
+                width: 400px; height: 600px; border: 2px solid #4CAF50;
+                border-radius: 10px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                background-color: white;">
+        <iframe src="http://127.0.0.1:7860" 
+                width="100%" 
+                height="100%" 
+                style="border: none;"
+                allow="microphone">
+        </iframe>
+    </div>
 </div>
 
 <script>
     function toggleChatbot() {
         const frame = document.getElementById("chatbot-frame");
-        frame.style.display = (frame.style.display === "none") ? "block" : "none";
+        const button = document.getElementById("chatbot-toggle");
+        
+        if (frame.style.display === "none") {
+            frame.style.display = "block";
+            button.style.transform = "rotate(360deg)";
+            button.style.backgroundColor = "#f44336";
+            button.innerHTML = "✕";
+        } else {
+            frame.style.display = "none";
+            button.style.transform = "rotate(0deg)";
+            button.style.backgroundColor = "#4CAF50";
+            button.innerHTML = "🤖";
+        }
     }
-</script>
-
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <p>© Nous sommes la meilleure agence de tourisme en Tunisie</p>
-  </footer>
-<script>
-document.getElementById('chatbot-icon').addEventListener('click', function () {
-    alert('Bienvenue ! Le chatbot sera bientôt disponible.');
-});
-
+    
+    // Optional: Auto-close when clicking outside
+    document.addEventListener('click', function(event) {
+        const frame = document.getElementById("chatbot-frame");
+        const button = document.getElementById("chatbot-toggle");
+        const container = document.getElementById("chatbot-container");
+        
+        if (frame.style.display === "block" && 
+            !container.contains(event.target) && 
+            event.target !== button) {
+            toggleChatbot();
+        }
+    });
 </script>
 </body>
 </html>
