@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Client</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- Navigation commune -->
+          <nav>
+        <ul>
+            <li><a href="client.php">Accueil</a></li>
+            <li><a href="calculator.php">Calculer mon budget</a></li>
+            <li><a href="contact.php">Nous contacter</a></li>
+            <li><a href="logout.php">Déconnexion</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <main class="container">
+        <h1>Formulaire de Réservation</h1>
+        
+        <form id="formReservation" class="form-client">
+            <div class="form-group">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+
+            <div class="form-group">
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="hotel">Hôtel :</label>
+                <select id="hotel" name="hotel" required>
+                    <option value="Dar Said">Dar Said</option>
+                    <option value="Hammamet">Royal Hammamet</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-submit">Valider la réservation</button>
+        </form>
+
+        <div id="message"></div>
+    </main>
+
+    <script src="client.js"></script>
+</body>
+</html>
